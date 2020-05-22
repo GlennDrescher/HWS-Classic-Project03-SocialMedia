@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -61,6 +62,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neP-EK-TQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="134.78260869565219" y="86.383928571428569"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="jG5-WH-iTT">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="KgI-8s-Be5" customClass="DetailViewController" customModule="HWS_Classic_Project01_StormViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WY6-xM-LUd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d83-JX-kdT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d83-JX-kdT" firstAttribute="leading" secondItem="UlM-db-1Ph" secondAttribute="leading" id="2ow-bS-1JY"/>
+                            <constraint firstItem="d83-JX-kdT" firstAttribute="top" secondItem="WY6-xM-LUd" secondAttribute="topMargin" constant="-44" id="pB6-jE-RxG"/>
+                            <constraint firstItem="d83-JX-kdT" firstAttribute="centerY" secondItem="WY6-xM-LUd" secondAttribute="centerY" id="pkT-mU-miA"/>
+                            <constraint firstItem="d83-JX-kdT" firstAttribute="centerX" secondItem="WY6-xM-LUd" secondAttribute="centerX" id="s82-EV-oJj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UlM-db-1Ph"/>
+                    </view>
+                    <connections>
+                        <outlet property="ImageView" destination="d83-JX-kdT" id="zqA-FU-SNS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6aD-9G-8JS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771.0144927536232" y="86.383928571428569"/>
         </scene>
     </scenes>
 </document>
