@@ -19,9 +19,21 @@ class DetailViewController: UIViewController {
         
         navigationItem.largeTitleDisplayMode = .never
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+        
         if let imageToLoad = selectedImage {
             ImageView.image = UIImage(named: imageToLoad)
         }
+    }
+    
+    @objc func shareTapped() {
+        guard let image = ImageView.image?.jpegData(compressionQuality: 0.8) else {
+            print("No Image found")
+            return
+        }
+        let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
